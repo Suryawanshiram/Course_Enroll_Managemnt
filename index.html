@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Enroll Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: rgb(178, 239, 241)">
+    <!-- The main heading of the page -->
+    <center><h1>Student Management System</h1></center>
+    <!-- The form for entering student details -->
+    <table>
+      <tr>
+        <td>
+          <!-- The form is submitted on click of the submit button and the onFormSubmit function is called -->
+          <form
+            onsubmit="event.preventDefault();onFormSubmit();"
+            autocomplete="off"
+          >
+            <!-- The name of the school -->
+            <h2>SCIENCE SCHOOL</h2>
+            <!-- The heading of the form -->
+            <h3>Student Form</h3>
+            <!-- The input field for the full name -->
+            <div>
+              <label>Full Name</label>
+              <!-- The error message displayed when the field is left blank -->
+              <label class="validation-error hide" id="userNamevalidationError"
+                >: This field is required</label
+              >
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                placeholder="Enter the user Name"
+              />
+            </div>
+            <!-- The input field for the enrollment number -->
+            <div>
+              <label>Enrollment No</label>
+              <!-- The error message displayed when the field is left blank -->
+              <label class="validation-error hide" id="rollNovalidationError"
+                >:This field is required</label
+              >
+              <input
+                type="text"
+                name="rollNo"
+                id="rollNo"
+                placeholder="Enter the Enrollment Number"
+              />
+            </div>
+            <!-- The input field for the student class -->
+            <div>
+              <label>Student Class</label>
+              <!-- The error message displayed when the field is left blank -->
+              <label class="validation-error hide" id="stdClassvalidationError">
+                : This field is required</label
+              >
+              <input
+                type="text"
+                name="stdClass"
+                id="stdClass"
+                placeholder="Enter the Student Class"
+              />
+            </div>
+            <!-- The input field for the telephone number -->
+            <div>
+              <label>Telephone Number</label>
+              <!-- The error message displayed when the field is left blank -->
+              <label class="validation-error hide" id="tnumvalidationError"
+                >: This field is required</label
+              >
+              <input
+                type="number"
+                name="tnum"
+                id="tnum"
+                placeholder="Enter the Telephone Number"
+              />
+            </div>
+            <!-- The input field for the age -->
+            <div>
+              <label>Age</label>
+              <!-- The error message displayed when the field is left blank -->
+              <label class="validation-error hide" id="agevalidationError"
+                >: This field is required</label
+              >
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Enter the Age"
+              />
+            </div>
+            <!-- The submit button for submitting the form -->
+            <div class="form-action-buttons">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <!-- The table for displaying an image -->
+          <table class="image">
+            <center><img src="student.jpg"</center>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table class="list" id="stdlist" style="background-color: white">
+      <thead>
+        <!-- This creates a row in the header section with column headings-->
+        <tr>
+          <th>Full Name</th>
+          <th>Enrollment No</th>
+          <th>Class</th>
+          <th>Telephone Number</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
